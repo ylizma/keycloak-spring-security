@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymleaf/layout" layout:decorator="layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<div class="mt-4 container" layout:fragment="content">
+    <table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Label</th>
+        <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p:${products}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.label}"></td>
+        <td th:text="${p.price}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
